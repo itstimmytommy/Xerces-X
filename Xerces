@@ -19,6 +19,12 @@ local CreditSection = Credits:NewSection("Credits")
 
 --ExtraSection Code--
 
+--Blox Fruit Script Hub
+ExtraSection:NewButton("Blox Fruit Script", "Op bloxfruit script!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv1"))()
+end)
+--Blox Fruit Script Hub End
+
 --MM2 Script
 ExtraSection:NewButton("Murder Mystery 2 Script", "Op mm2 script!", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/RafTLwPN'))()
