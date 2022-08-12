@@ -41,6 +41,14 @@ end)
 
 --MainSection Code--
 
+--Anti Lag Script
+MainSection:NewButton("Less Lag", "Have less lag but bad quality!", function()
+    while true do
+        game.roblox.shaders(1.5)
+     end
+end)
+--Anti Lag Script End
+
 --Force Reset Button
 MainSection:NewButton("Force Reset", "Reset Forcefully if Glitched!", function()
 local Player = game:GetService("Players").LocalPlayer
