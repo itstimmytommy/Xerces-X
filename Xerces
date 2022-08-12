@@ -19,6 +19,12 @@ local CreditSection = Credits:NewSection("Credits")
 
 --ExtraSection Code--
 
+--Prision Life Script
+ExtraSection:NewButton("Prison Life Script", "Op Prison Life Script GUI!", function()
+    loadstring(game:HttpGet(("")))()
+    end)
+--Prision Life Script End
+
 --Pls Donate Script
 ExtraSection:NewButton("Pls Donate Script", "Op pls donate script more donations!", function()
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/o5u3/PLS-Donate/main/Fake-Donate.lua")))()
