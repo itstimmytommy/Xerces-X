@@ -92,6 +92,12 @@ CreditSection:NewLabel("Also WinzexTim is my rblx user it might not show!")
 
 --PlayerSection Code
 
+--No Clip
+PlayerSection:NewButton("No Clip", "No Clip Script!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/No%20Clip'))()
+    end)
+--No Clip End
+
 --ESP Button
 PlayerSection:NewButton("ESP", "Show Players!", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Xerces%20ESP'))()
