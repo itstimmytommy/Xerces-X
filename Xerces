@@ -9,8 +9,23 @@ local MainSection = Main:NewSection("Main")
 local Player = Window:NewTab("Player")
 local PlayerSection = Player:NewSection("Player")
 
+local Extra = Window:NewTab("Extra")
+local ExtraSection = Extra:NewSection("Extra")
+
 local Credits = Window:NewTab("By WinzexTim")
 local CreditSection = Credits:NewSection("Credits")
+
+--ExtraSection Code
+
+--Da Hood Script (RayX)
+ExtraSection:NewButton("RayX Da Hood", "Op da hood script gui!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
+end)
+--Da Hood Script (RayX) End
+ExtraSection:NewButton("Jailbreak (OP)", "Op jailbreak script gui!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))() 
+end)
+--ExtraSection Code End
 
 --MainSection Code
 
