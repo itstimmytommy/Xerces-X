@@ -37,6 +37,12 @@ loadstring(game:HttpGet("https://paste.ee/r/r9gnA", true))()
 end)
 --Skywars Script End
 
+--Mobile DH Script
+ExtraSection:NewButton("Mobile Da Hood Script", "Op mobile supported dh script!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+end)
+--Mobile DH Script End
+
 --Blox Fruit Script Hub
 ExtraSection:NewButton("Blox Fruit Script", "Op bloxfruit script!", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Frerfgzz/free-script/main/SMZHUBv1"))()
