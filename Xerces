@@ -19,6 +19,12 @@ local CreditSection = Credits:NewSection("Credits")
 
 --ExtraSection Code--
 
+--Pls Donate Script
+ExtraSection:NewButton("Pls Donate Script", "Op pls donate script more donations!", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/o5u3/PLS-Donate/main/Fake-Donate.lua")))()
+end)
+--Pls Donate Script End
+
 --Skywars Script
 ExtraSection:NewButton("Blox Fruit Script", "Op bloxfruit script!", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/Loadstring9VHD6Wmyi82n", true))()
