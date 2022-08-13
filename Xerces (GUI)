@@ -84,6 +84,12 @@ end)
 
 --MainSection Code--
 
+--Teleport to Player
+MainSection:NewButton("Teleport to Player", "Teleport to the player you decide!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Teleport%20to%20Player"))()
+end)
+--Teleport to Player End
+
 --Anti Lag Script
 MainSection:NewButton("Less Lag", "Have less lag but bad quality!", function()
     while true do
