@@ -19,6 +19,12 @@ local CreditSection = Credits:NewSection("Credits")
 
 --ExtraSection Code--
 
+--Arsenal Script
+ExtraSection:NewButton("Arsenal Script", "Op Aresenal Script GUI!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HonestlyDex/DexHub/main/V3.lua"))()
+end)
+--Arsenal Script End
+
 --Prision Life Script
 ExtraSection:NewButton("Prison Life Script", "Op Prison Life Script GUI!", function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Prison%20Life")))()
