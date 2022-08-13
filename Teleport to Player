@@ -1,0 +1,81 @@
+-- Objects
+
+local ScreenGui = Instance.new("ScreenGui")
+local FrameGUI = Instance.new("Frame")
+local Teleport = Instance.new("TextButton")
+local Username = Instance.new("TextBox")
+local Credits = Instance.new("TextLabel")
+local Open = Instance.new("TextButton")
+
+-- Properties
+
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+FrameGUI.Name = "FrameGUI"
+FrameGUI.Parent = ScreenGui
+FrameGUI.BackgroundColor3 = Color3.new(0, 0, 0)
+FrameGUI.BackgroundTransparency = 0.30000001192093
+FrameGUI.Position = UDim2.new(0, 176, 0, 0)
+FrameGUI.Size = UDim2.new(0, 334, 0, 222)
+FrameGUI.Visible = false
+
+Teleport.Name = "Teleport"
+Teleport.Parent = FrameGUI
+Teleport.BackgroundColor3 = Color3.new(0, 0, 0)
+Teleport.BackgroundTransparency = 0.30000001192093
+Teleport.Position = UDim2.new(0, 0, 0, 154)
+Teleport.Size = UDim2.new(0, 327, 0, 68)
+Teleport.Font = Enum.Font.SciFi
+Teleport.FontSize = Enum.FontSize.Size60
+Teleport.Text = "Teleport"
+Teleport.TextColor3 = Color3.new(0, 1, 1)
+Teleport.TextSize = 60
+
+Teleport.MouseButton1Down:connect(function()
+getglobal game
+getfield -1 Workspace
+getfield -1 harryboo1977
+getfield -1 HumanoidRootPart
+getglobal game
+getfield -1 Workspace
+getfield -1 Username.Text
+getfield -1 Torso
+getfield -1 CFrame
+setfield -6 CFrame
+emptystack
+end)
+
+
+Username.Name = "Username"
+Username.Parent = FrameGUI
+Username.BackgroundColor3 = Color3.new(0, 0, 0)
+Username.Size = UDim2.new(0, 328, 0, 111)
+Username.Font = Enum.Font.SciFi
+Username.FontSize = Enum.FontSize.Size60
+Username.Text = "Username"
+Username.TextColor3 = Color3.new(0, 1, 1)
+Username.TextSize = 60
+
+Credits.Name = "Credits"
+Credits.Parent = FrameGUI
+Credits.BackgroundColor3 = Color3.new(0, 0, 0)
+Credits.BackgroundTransparency = 0.30000001192093
+Credits.Position = UDim2.new(0, 0, 0, 111)
+Credits.Size = UDim2.new(0, 330, 0, 40)
+Credits.Font = Enum.Font.Garamond
+Credits.FontSize = Enum.FontSize.Size24
+Credits.Text = "Credits To Harry For Teleport Gui Have Fun :P"
+Credits.TextColor3 = Color3.new(0, 1, 1)
+Credits.TextSize = 20
+
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.new(0, 0, 0)
+Open.BackgroundTransparency = 0.30000001192093
+Open.Position = UDim2.new(0, 0, 0, 345)
+Open.Size = UDim2.new(0, 95, 0, 68)
+Open.Font = Enum.Font.SciFi
+Open.FontSize = Enum.FontSize.Size48
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(0, 1, 1)
+Open.TextSize = 40
