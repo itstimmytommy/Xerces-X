@@ -1,0 +1,175 @@
+wait(1)
+ 
+-- Get LocalPlayer
+local p = game.Players.LocalPlayer
+ 
+-- Instance New Objects
+local gui = Instance.new('ScreenGui',p.PlayerGui)
+local frame = Instance.new('Frame',gui)
+local open = Instance.new('TextButton',gui)
+local bool = Instance.new('BoolValue',frame)
+local button = Instance.new('TextButton',frame)
+local name = Instance.new('TextLabel',frame)
+local box = Instance.new('TextBox',frame)
+local msg = Instance.new('StringValue',box)
+local exit = Instance.new('TextButton',frame)
+local spamon = Instance.new('TextButton',frame)
+local spamoff = Instance.new('TextButton',frame)
+local search = Instance.new('TextBox',frame)
+local people = Instance.new('StringValue',frame)
+ 
+-- Objects Name
+gui.Name = "SpamGUI"
+frame.Name = "SpawnFrame"
+open.Name = "OpenButton"
+bool.Name = "Bool"
+button.Name = "Open/Close"
+name.Name = "Title"
+box.Name = "TextBox"
+msg.Name = "Msg"
+exit.Name = "ExitButton"
+spamon.Name = "SpamON"
+spamoff.Name = "SpamOFF"
+search.Name = "SearchPeople"
+people.Name = "Result"
+ 
+-- Objects Position
+frame.Position = UDim2.new(0.7,7,0,3)
+open.Position = UDim2.new(0,-100,0.7,0)
+button.Position = UDim2.new(0,170,0.7,13)
+name.Position = UDim2.new(0,0,0,0)
+box.Position = UDim2.new(0,0,0,45)
+exit.Position = UDim2.new(0.8,30,0,0)
+spamon.Position = UDim2.new(0,5,0.7,13)
+spamoff.Position = UDim2.new(0,245,0.7,13)
+search.Position = UDim2.new(0,0,0,200)
+ 
+-- Object Size
+frame.Size = UDim2.new(0,400,0,200)
+open.Size = UDim2.new(0,100,0,40)
+button.Size = UDim2.new(0,60,0,40)
+name.Size = UDim2.new(0.8,25,0,40)
+box.Size = UDim2.new(1,0,0,100)
+exit.Size = UDim2.new(0,50,0,43)
+spamon.Size = UDim2.new(0,150,0,40)
+spamoff.Size = UDim2.new(0,150,0,40)
+search.Size = UDim2.new(0,400,0,50)
+ 
+-- Dragggable Frame
+frame.Active = true
+frame.Draggable = true
+ 
+-- Objects Background Color
+frame.BackgroundColor3 = Color3.new(0,0,0)
+open.BackgroundColor3 = Color3.new(255, 255, 0)
+button.BackgroundColor3 = Color3.new(255, 255, 255)
+name.BackgroundColor3 = Color3.new(255, 255, 255)
+box.BackgroundColor3 = Color3.new(255, 255, 255)
+exit.BackgroundColor3 = Color3.new(255, 0, 0)
+spamon.BackgroundColor3 = Color3.new(255, 0, 0)
+spamoff.BackgroundColor3 = Color3.new(255, 0, 0)
+search.BackgroundColor3 = Color3.new(255,255,255)
+ 
+-- Object Background Transparency
+frame.BackgroundTransparency = 0.5
+box.BackgroundTransparency = 0.5
+button.BackgroundTransparency = 0.6
+name.BackgroundTransparency = 1
+search.BackgroundTransparency = 0.6
+ 
+-- Visible
+open.Visible = false
+search.Visible = false
+ 
+-- Text Size/Scaled enabled
+open.TextScaled = true
+exit.TextScaled = true
+spamon.TextScaled = true
+spamoff.TextScaled = true
+box.TextScaled = true
+button.TextScaled = true
+name.TextScaled = true
+search.TextScaled = true
+ 
+-- Box Line
+box.ClearTextOnFocus = true
+box.MultiLine = true
+ 
+-- Text Color
+name.TextColor3 = Color3.new(255,0,0)
+ 
+-- Text
+open.Text = "Open"
+exit.Text = "Exit"
+spamoff.Text = "Turn Off"
+spamon.Text = "Turn On"
+box.Text = "Message Here ....."
+button.Text = "Close"
+name.Text = "Unique's Spam GUI"
+search.Text = "Search people"
+ 
+-- Value
+bool.Value = false
+msg.Value = ""
+people.Value = ""
+ 
+-- Spam On
+spamon.MouseButton1Down:connect(function()
+bool.Value = true
+msg.Value = box.Text
+box.Text = "Success !"
+search.Text = ""
+wait(1)
+box.Text = "Message Here ....."
+end)
+ 
+-- Spam Off
+spamoff.MouseButton1Down:connect(function()
+bool.Value = false
+end)
+ 
+-- Exit Function
+exit.MouseButton1Down:connect(function()
+frame:TweenPosition(UDim2.new(1,0,0,3),"Out","Quad",1,true)
+wait(1)
+frame.Visible = false
+wait(.5)
+open.Visible = true
+open:TweenPosition(UDim2.new(0,5,0.7,0),"Out","Bounce",1,true)
+end)
+ 
+-- Open Function
+open.MouseButton1Down:connect(function()
+open:TweenPosition(UDim2.new(0,-100,0.7,0),"Out","Quad",1,true)
+wait(1)
+open.Visible = false
+wait(.5)
+frame.Visible = true
+frame:TweenPosition(UDim2.new(0.7,7,0,3),"Out","Bounce",1,true)
+end)
+ 
+-- Search People Box
+button.MouseButton1Down:connect(function()
+if search.Visible == false then
+button.Text = "Open"
+search.Visible = true
+else
+button.Text = "Close"
+search.Visible = false 
+end
+end)
+ 
+-- Spam Function
+while true do
+wait(.1)
+ if bool.Value == true then
+local ppl = game.Players:FindFirstChild(people.Value)
+if ppl then
+game:GetService('Chat'):Chat(ppl.Character, msg.Value)
+   elseif not ppl then
+for i,v in pairs(game.Players:GetChildren()) do
+game:GetService('Chat'):Chat(v.Character, msg.Value)
+end
+end
+end
+end
