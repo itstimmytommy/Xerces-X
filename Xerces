@@ -27,7 +27,7 @@ end)
 --Arsenal Script End
 
 --MM2 Mobile Script
-ExtraSection:NewButton("Mobile MM@ Script", "Op Murder Mystery 2 Script GUI for Mobile!", function()
+ExtraSection:NewButton("Mobile MM2 Script", "Op Murder Mystery 2 Script GUI for Mobile!", function()
 loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
 end)
 --MM2 Mobile Script End
