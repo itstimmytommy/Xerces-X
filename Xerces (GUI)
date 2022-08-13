@@ -1,4 +1,5 @@
 --C&P our loadstring for this whole thing - loadstring(game:HttpGet("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Xerces"))()
+--loadstring(game:HttpGet(""))()
 --Library--
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Xerces X - Version 1", "Ocean")
@@ -27,7 +28,7 @@ end)
 --Arsenal Script End
 
 --MM2 Mobile Script
-ExtraSection:NewButton("Mobile MM2 Script", "Op Murder Mystery 2 Script GUI for Mobile!", function()
+ExtraSection:NewButton("Mobile MM@ Script", "Op Murder Mystery 2 Script GUI for Mobile!", function()
 loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
 end)
 --MM2 Mobile Script End
@@ -44,17 +45,17 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/o5u3/PLS-Donate/main
 end)
 --Pls Donate Script End
 
---Skywars Script
-ExtraSection:NewButton("Skywars Script", "Op skywars script!", function()
-loadstring(game:HttpGet("https://paste.ee/r/r9gnA", true))()
-end)
---Skywars Script End
-
 --Mobile DH Script
 ExtraSection:NewButton("Mobile Da Hood Script", "Op mobile supported dh script!", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
 end)
 --Mobile DH Script End
+
+--Skywars Script
+ExtraSection:NewButton("Skywars Script", "Op skywars script!", function()
+loadstring(game:HttpGet("https://paste.ee/r/r9gnA", true))()
+end)
+--Skywars Script End
 
 --Blox Fruit Script Hub
 ExtraSection:NewButton("Blox Fruit Script", "Op bloxfruit script!", function()
