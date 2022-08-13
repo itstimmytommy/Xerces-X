@@ -86,6 +86,12 @@ end)
 
 --MainSection Code--
 
+--Fun Stuff GUI
+MainSection:NewButton("Fun Script GUI", "Extra fun things", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Fun%20Stuff"))()
+end)
+--Fun Stuff GUI End
+
 --Spam GUI
 MainSection:NewButton("Spam Script GUI", "Choose what you want to spam in a GUI", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Spam%20GUI"))()
