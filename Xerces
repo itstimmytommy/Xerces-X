@@ -1,4 +1,4 @@
---C&P our loadstring for this whole thing - loadstring(game:HttpGet(""))()
+--C&P our loadstring for this whole thing - loadstring(game:HttpGet("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/Xerces"))()
 --Library--
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Xerces X - Version 1", "Ocean")
