@@ -86,6 +86,13 @@ end)
 
 --MainSection Code--
 
+--Fun Troll Script GUI
+MainSection:NewButton("Fun Troll Script GUI", "A Fun Troll Script UI!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
+end)
+--Fun Troll Script GUI End
+
+
 --VR Script
 MainSection:NewButton("VR Script", "A Fun VR Script!", function()
 loadstring(game:HttpsGet("https://raw.githubusercontent.com/itstimmytommy/Xerces-X/main/VR%20Script"))()
